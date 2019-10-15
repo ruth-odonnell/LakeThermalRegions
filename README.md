@@ -19,5 +19,5 @@ Then run the following code to start the app.
 
 ```
 library(shiny)
-runGitHub(repo='LakeThermalEcoregions', username='ruth=odonnell') 
+runGitHub(repo='LakeThermalEcoregions', username='ruth-odonnell') 
 ```
