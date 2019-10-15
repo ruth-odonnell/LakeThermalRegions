@@ -1,6 +1,4 @@
-# Lakebiomes
-
-By Ruth
+# Lake Thermal Ecoregions
 
 This is an R shiny app. For this app, you will need to install the following R packages and their dependencies if required. 
 
