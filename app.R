@@ -376,9 +376,9 @@ ui <- fluidPage(
                        been included in the predictions due to excessive periods of ice cover, 
                        .i.e. there is no predicted class for these locations. If a location on the map 
                        is selected where no data are available, the error 'no applicable method for 
-                       recode applied to an object of class NULL' will be displayed),
+                       recode applied to an object of class NULL' will be displayed"),
                       
-                      h4('Post' indicates the posterior probability of cluster membership.")  , 
+                      h4("'Post' indicates the posterior probability of cluster membership.")  , 
 
                       h4("The table below shows the colour information used for the groups within the app.") 
                       )}), 
