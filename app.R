@@ -292,7 +292,7 @@ ui <- fluidPage(
   theme = shinytheme("cerulean"),
   
   # Application title
-  titlePanel(h1("Lake Thermal Ecoregions")),
+  titlePanel(h1("Lake Thermal Regions")),
   
   # Sidebar with a slider input for the number of bins
   sidebarLayout(
