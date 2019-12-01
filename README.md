@@ -1,4 +1,4 @@
-# Lake Thermal Ecoregions
+# Lake Thermal Regions
 
 This is an R shiny app. For this app, you will need to install the following R packages and their dependencies if required. 
 
@@ -17,5 +17,5 @@ Then run the following code to start the app.
 
 ```
 library(shiny)
-runGitHub(repo='LakeThermalEcoregions', username='ruth-odonnell') 
+runGitHub(repo='LakeThermalRegions', username='ruth-odonnell') 
 ```
