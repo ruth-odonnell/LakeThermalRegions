@@ -362,14 +362,14 @@ ui <- fluidPage(
       
         
         withTags({div(class="header", checked=NA, 
-                      h4("This app shows the predicted lake thermal ecoregion for 
+                      h4("This app shows the predicted lake thermal region for 
                        each grid cell (~2 degree) agross the globe based on 
                        simulated Flake time series.
                        
                        On the 'Main' tab clicking on a point on the map will produce
                        a plot of the Flake data (points) along with the
                        smoothed curve (shown by a solid black line).
-                       There is also the option to add on the predicted ecoregion group mean
+                       There is also the option to add on the predicted thermal region group mean
                        for the location selected and any additional group means that might be of interest.
                        
                        Locations where there is a 'flat' data series at zero have not
