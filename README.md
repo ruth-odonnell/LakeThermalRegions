@@ -1,5 +1,10 @@
 # Lake Thermal Regions
 
+A local live version of this app is currently available using the web link provided however it is strongly recommended that the app is run from the version available on GitHub using the instructions provided below. 
+
+https://shiny.maths-stats.gla.ac.uk/rhaggarty/LakeThermalRegions/
+
+
 This is an R shiny app. For this app, you will need to install the following R packages and their dependencies if required. 
 
 dplyr\
