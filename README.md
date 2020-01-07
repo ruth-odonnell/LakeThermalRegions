@@ -4,7 +4,7 @@ A local web version of this R shiny app is currently available using the web lin
 
 https://shiny.maths-stats.gla.ac.uk/rhaggarty/LakeThermalRegions/
 
-### Installing R Software
+### Installing R 
 
 The app is run using R, free software which can be downloaded from https://cran.r-project.org/
 
