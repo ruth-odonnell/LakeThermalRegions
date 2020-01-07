@@ -4,7 +4,7 @@ A local web version of this R shiny app is currently available using the web lin
 
 https://shiny.maths-stats.gla.ac.uk/rhaggarty/LakeThermalRegions/
 
-# Installing R Software
+### Installing R Software
 
 The app is run using R, free software which can be downloaded from https://cran.r-project.org/
 
@@ -12,7 +12,7 @@ R Studio is an Integrated Development Envrionment for R which can be downloaded 
 
 R has a vast number of well documented local extension packages available. Instructions on how to install such packages are provided at: https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages
 
-# Running the Lake Thermal Regions App
+### Running the Lake Thermal Regions App
 
 For this R shiny app. For this app, you will need to install the following R packages and their dependencies if required. 
 
