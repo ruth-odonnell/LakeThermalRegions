@@ -155,7 +155,7 @@ plotdat <- function(i, am=FALSE, addmeans=NULL){
                                     axis.title = element_text(size = rel(1.25)),
                                     plot.caption=element_text(size=rel(1.4), hjust=0.5, color="black"),
                                     plot.subtitle=element_text(size=rel(1.4), hjust=0.5, color="black")) +
-    labs(title=paste("Lon =", po[1],", Lat =",po[2], ", Pred Group=",ff), subtitle=paste("Post:", nu), caption=paste(lakeinfo))
+    labs(title=paste("Lat =",po[2],"Lon =", po[1],  "Pred Group=",ff), subtitle=paste("Post:", nu), caption=paste(lakeinfo))
   d <- p + geom_point() + labs(x="Week of Year", y="LSWT Celsius")
   z <- d + geom_line(data=datline, aes(x=datline$nx, y=datline$ny),size=rel(2), col="black", inherit.aes = FALSE)+ ylim(0, 35)
   
@@ -347,21 +347,30 @@ ui <- fluidPage(
                            accept=c('text/csv', 'text/comma-separated-values,text/plain', '.csv')),
                  
                  
-                                 plotOutput("predplot")
+                                 plotOutput("predplot")),
 
-                # tabPanel('User Input Location', 
+                 tabPanel(h2('User Input Location'), 
                  
            
-                # fluidRow(
-                #   column(2, numericInput("lat", h4("Longitude:"),  NULL, min = -180, max = 180)),
-                #   column(2,numericInput("lon", h4("Latitude:"), NULL, min = -55, max = 82))
-                # )
+                 fluidRow(
+                   column(2,numericInput("lon", h4("Latitude:"), NULL, min = -55, max = 82)),
+                   column(2, numericInput("lat", h4("Longitude:"),  NULL, min = -180, max = 180))
+                 ),
+                 
+                 
+                 plotOutput("extramap") ,
+                 plotOutput("userplot") 
                 ),
         
          tabPanel(h2('About'),  
       
+                  
         
-        withTags({div(class="header", checked=NA, 
+        withTags({div(class="header", checked=NA,
+                      
+                      
+                      h4("The work was supported by the GloboLakes project funded by the Natural Environment Research Council (grant number NE/J021717/1). The app was produced by Ruth O'Donnell at Glasgow University. A paper is available describing and applying this app, doi https://doi.org/10.1038/s41467-020-15108-z"),
+                      
                       h4("This app shows the predicted lake thermal region for 
                        each grid cell (~2 degree) agross the globe based on 
                        simulated Flake time series.
@@ -381,9 +390,12 @@ ui <- fluidPage(
                       h4("'Post' indicates the posterior probability of cluster membership.")  , 
 
                       h4("The table below shows the colour information used for the groups within the app.") 
-                      )}), 
+                      
+                         )}), 
                  
                  tableOutput('to')
+
+        
                  
                  ))
       
