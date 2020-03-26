@@ -369,7 +369,9 @@ ui <- fluidPage(
         withTags({div(class="header", checked=NA,
                       
                       
-                      h4("The work was supported by the GloboLakes project funded by the Natural Environment Research Council (grant number NE/J021717/1). The app was produced by Ruth O'Donnell at Glasgow University. A paper is available describing and applying this app, doi https://doi.org/10.1038/s41467-020-15108-z"),
+                      h4("The work was supported by the GloboLakes project funded by the Natural Environment Research Council (grant number NE/J021717/1). The app was produced by Ruth O'Donnell at Glasgow University. A paper is available describing and applying this app is available", a(href="https://doi.org/10.1038/s41467-020-15108-z", "here")), 
+                      
+                      
                       
                       h4("This app shows the predicted lake thermal region for 
                        each grid cell (~2 degree) agross the globe based on 
@@ -393,8 +395,9 @@ ui <- fluidPage(
                       
                          )}), 
                  
-                 tableOutput('to')
-
+                 tableOutput('to'),
+        
+        imageOutput('logos',height=100)
         
                  
                  ))
@@ -414,12 +417,18 @@ ui <- fluidPage(
 
 server <- function(input, output, session) {
   
+  output$logos <- renderImage({
+    filename <- normalizePath("logos.png")
+    list(src = filename, align="center", height=300 ) }, deleteFile = FALSE)
+  
+  
   ## get data
   mydat <- reactive({
     inFile <- input$file1
     if (is.null(inFile))  return(NULL)
     read.csv(inFile$datapath, header=TRUE, stringsAsFactors = FALSE)#input$header)
   })
+  
   
   observe({
     date <- strptime(mydat()[,1], format="%d/%m/%Y")
